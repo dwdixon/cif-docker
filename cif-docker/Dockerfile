@@ -10,7 +10,7 @@ ENV SUDO_USER root
 ENV DEBIAN_FRONTEND=noninteractive
 ENV LANG=C.UTF-8
 
-COPY supervisord.conf /usr/local/etc/supervisord.conf
+COPY supervisord-cif.conf /etc/supervisor/conf.d/supervisord-cif.conf
 COPY entrypoint /
 
 RUN echo "resolvconf resolvconf/linkify-resolvconf boolean false" | debconf-set-selections ; \
